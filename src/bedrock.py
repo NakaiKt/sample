@@ -1,9 +1,20 @@
+"""
+AWS Bedrock APIを使ったサンプルコード
+"""
+
 import boto3
 import json
 
 import argparse
 
 def bedrock_text_sample(bedrock: boto3.client, model_id: str = 'anthropic.claude-v2'):
+    """
+    Bedrockにテキストを送信して結果を取得するサンプル
+
+    Args:
+        bedrock (boto3.client): Bedrockのクライアント
+        model_id (str, optional): モデルID. Defaults to 'anthropic.claude-v2'.
+    """
 
     input_prompt = input("Input prompt: ")
 
